@@ -34,7 +34,7 @@ pattern_provider <- "\\b(?<=|)(?<!\\s)\\d{6}[A-Z0-9][a-zA-Z]\\b"
 # Load files ----
 #nephu_linelist_file <- "NEPHUCaseLinelistGPExtractionAssignedLPHU_7-20Jul2025.xlsx" 
 
-nephu_linelist_file <- "NEPHUCaseLinelistGPExtractionAssignedLPHU_1-15Sep2025.xlsx"
+nephu_linelist_file <- datafile
 
 linelist.raw <- readxl::read_xlsx(here::here("Data", nephu_linelist_file)) %>% clean_names() # use NEPHU extract
 
@@ -483,7 +483,7 @@ final_table <- linelist %>%
   arrange(section, phess_id)
 
 writexl::write_xlsx(final_table, here("Output", "final_table.xlsx"))
-
+#length(unique(final_table$phess_id))
 
 # export file to HP folder for next stage - integration into tracker. Save file name as YYYY-MM-DD-finaltable.xlsx
 one_drive_folder <- str_extract(getwd(), "^.*Health/")
