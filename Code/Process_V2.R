@@ -485,8 +485,8 @@ final_table <- linelist %>%
 writexl::write_xlsx(final_table, here("Output", "final_table.xlsx"))
 #length(unique(final_table$phess_id))
 
-# export file to HP folder for next stage - integration into tracker. Save file name as YYYY-MM-DD-finaltable.xlsx
-one_drive_folder <- str_extract(getwd(), "^.*Health/")
-HP_folder <- paste0(one_drive_folder, "Communicable Disease Secure/Other Docs/GP Extract Lists (Automated - Do Not Edit) test")
-
-writexl::write_xlsx(final_table, paste0(HP_folder, "/", Sys.Date(), "-finaltable.xlsx"))
+# export file to HP folder for next stage - integration into tracker. Save file name as YYYY-MM-DD-finaltable.xlsx - Carried out in ProcessRun.R file
+# one_drive_folder <- str_extract(getwd(), "^.*Health/")
+# HP_folder <- paste0(one_drive_folder, "Communicable Disease Secure/Other Docs/GP Extract Lists (Automated - Do Not Edit) test")
+# 
+# writexl::write_xlsx(final_table, paste0(HP_folder, "/", Sys.Date(), "-finaltable.xlsx"))
