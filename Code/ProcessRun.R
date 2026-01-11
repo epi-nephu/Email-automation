@@ -39,5 +39,7 @@ writexl::write_xlsx(final_table, paste0(HP_folder, "/", Sys.Date(), "-finaltable
 
 # If the file was not successfully exported into the HP Communicable Disease Secure Sharepoint folder, then the folder path was probably incorrect due to OneDrive.
 # In this case, uncomment and run the next line replace the argument {HP_folder} with the correct Folder path.
+# Or manually copy the file (final_table.xlsx) from the Output folder to the HP Communicable Disease Secure/Other Docs/GP Extract Lists (Automated – Do Not Edit) test folder 
+# and rename the file as YYYY-MM-DD-finaltable.xlsx
 
 # writexl::write_xlsx(final_table, paste0(HP_folder, "/", Sys.Date(), "-finaltable.xlsx"))
