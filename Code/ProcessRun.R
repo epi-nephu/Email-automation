@@ -29,6 +29,8 @@ source(here::here("Code", "Process_V2.R"))
 
 
 # PART 3: Export output file to HP folder ----
+# Ensure you have final_table in the R Studio Environment ta. If it is not there, it means that Part 1 did not run properly/successfully. Try again or review the code.
+
 # Export file to HP Sharepoint for next stage - integration into tracker which will be performed by the Power Automate Run protocol set up by Esther. 
 # File will be save in Sharepoint as YYYY-MM-DD-finaltable.xlsx
 

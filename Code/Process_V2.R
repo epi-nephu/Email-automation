@@ -22,9 +22,9 @@ source(here("Code", "CommonFunctions.R"))
 
 
 # Set Configurations ----
-## provider field configurations
+## provider field configurations as observed in the HL7 data field
 ## config1: Full name | Medical centre | Provider number
-## config2: First name | Last name | Medical centre | Provider number
+## config2: First name | Last name | Medical centre | Provider number (only applies to Melb Path and RCH Path)
 
 provider_config2 <- c("Melbourne Pathology", "Royal Children's Hospital Pathology")
 
@@ -34,7 +34,7 @@ pattern_provider <- "\\b(?<=|)(?<!\\s)\\d{6}[A-Z0-9][a-zA-Z]\\b"
 # Load files ----
 #nephu_linelist_file <- "NEPHUCaseLinelistGPExtractionAssignedLPHU_7-20Jul2025.xlsx" 
 
-nephu_linelist_file <- datafile
+nephu_linelist_file <- datafile # data file specified in the ProcessRun.R file
 
 linelist.raw <- readxl::read_xlsx(here::here("Data", nephu_linelist_file)) %>% clean_names() # use NEPHU extract
 
